@@ -1,1 +1,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: black;
+}
+.mt-5 {
+  font-size: 30px;
+  font-family: fantasy;
+  color: white;
+}

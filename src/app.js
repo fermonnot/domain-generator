@@ -6,33 +6,24 @@ import "./assets/img/4geeks.ico";
 window.onload = () => {
   //write your code here()
 
-  document.querySelector("#excuse").innerHTML = generateExcuse();
+  document.querySelector("#excuse").innerHTML = generateDomain();
   console.log("Hello Rigo from the console!");
 };
 
-let generateExcuse = () => {
-  let who = ["The dog", "My grandma", "My sister", "My bird"];
-  let action = ["ate", "peed", "crushed", "broke"];
-  let what = ["my homework", "the keys", "the car"];
-  let when = [
-    "before the class",
-    "right on time",
-    "when I finished",
-    "during my lunch",
-    "while I was praying"
-  ];
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
+let generateDomain = () => {
+  let pronoun = ["the", "our"];
+  let adj = ["great", "big"];
+  let noun = ["jogger", "racoon"];
+  let extensions = [".com", ".org"];
 
-  return (
-    who[whoIndex] +
-    " " +
-    action[actionIndex] +
-    " " +
-    what[whatIndex] +
-    " " +
-    when[whenIndex]
-  );
+  for (let i in pronoun) {
+    console.log(pronoun[i] + adj[i] + noun[i] + extensions[i]);
+  }
+
+  let pronounIndex = Math.floor(Math.random() * pronoun.length);
+  let adjIndex = Math.floor(Math.random() * adj.length);
+  let nounIndex = Math.floor(Math.random() * noun.length);
+  let extensionIndex = Math.floor(Math.random() * extensions.length);
+
+  return `${pronoun[pronounIndex]}${adj[adjIndex]}${noun[nounIndex]}${extensions[extensionIndex]}`;
 };
